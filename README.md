@@ -160,4 +160,3 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 ##### Section 14: Wrap Up
 
 - [ ] Quiz 9: Final Quiz
-- [ ] Bonus Lecture
