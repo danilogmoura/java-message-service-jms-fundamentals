@@ -45,14 +45,13 @@ public class FirstQueue {
                 }
             }
 
-            if(connection != null ){
+            if (connection != null) {
                 try {
                     connection.close();
                 } catch (JMSException e) {
                     e.printStackTrace();
                 }
             }
+        }
     }
-
-}
 }

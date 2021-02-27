@@ -38,8 +38,8 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] Write a message to the Queue
 - [x] Consume a message from the Queue
 - [x] P2P in action
-- [ ] Summary So Far
-- [ ] Publish Subscribe in action
+- [x] Summary So Far
+- [x] Publish Subscribe in action
 - [ ] Use QueueBrowser
 - [ ] JMS 2.X
 - [ ] JMS 2.0 is Cool
