@@ -40,9 +40,9 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] P2P in action
 - [x] Summary So Far
 - [x] Publish Subscribe in action
-- [ ] Use QueueBrowser
-- [ ] JMS 2.X
-- [ ] JMS 2.0 is Cool
+- [x] Use QueueBrowser
+- [x] JMS 2.X
+- [x] JMS 2.0 is Cool
 - [ ] Quiz 2: Messaging in Action
 
 ##### Section 5: Anatomy of a JMS Message
