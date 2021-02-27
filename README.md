@@ -32,8 +32,8 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 
 ##### Section 4: Messaging in Action
 
-- [ ] JMS 1.X API
-- [ ] Create the project
+- [x] JMS 1.X API
+- [x] Create the project
 - [ ] Configure JNDI properties
 - [ ] Write a message to the Queue
 - [ ] Consume a message from the Queue
