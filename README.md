@@ -36,7 +36,7 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] Create the project
 - [x] Configure JNDI properties
 - [x] Write a message to the Queue
-- [ ] Consume a message from the Queue
+- [x] Consume a message from the Queue
 - [ ] P2P in action
 - [ ] Summary So Far
 - [ ] Publish Subscribe in action

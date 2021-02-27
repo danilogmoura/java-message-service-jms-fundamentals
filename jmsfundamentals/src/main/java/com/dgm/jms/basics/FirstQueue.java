@@ -22,6 +22,17 @@ public class FirstQueue {
 
             TextMessage message = session.createTextMessage("I am the creator of my destiny");
             producer.send(message);
+            System.out.printf("Message Sent: %s\n", message.getText());
+
+            //Consumer
+            session.createConsumer(queue);
+
+            MessageConsumer consumer = session.createConsumer(queue);
+            connection.start();
+
+            TextMessage messageReceived = (TextMessage) consumer.receive(5000);
+            System.out.printf("Message Received: %s\n", messageReceived.getText());
+
         } catch (NamingException | JMSException e) {
             e.printStackTrace();
         }
