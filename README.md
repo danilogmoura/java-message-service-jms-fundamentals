@@ -70,7 +70,7 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] Create the clinical app and send a message
 - [x] Asynchronous Processing
 - [x] Receive Patient Data
-- [ ] Check Eligibility and Send Reply
+- [x] Check Eligibility and Send Reply
 - [ ] Process the response
 - [ ] Testing
 - [ ] Load Balancing in action
