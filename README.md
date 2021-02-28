@@ -68,8 +68,8 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] Create the project
 - [x] Create the model class
 - [x] Create the clinical app and send a message
-- [ ] Asynchronous Processing
-- [ ] Receive Patient Data
+- [x] Asynchronous Processing
+- [x] Receive Patient Data
 - [ ] Check Eligibility and Send Reply
 - [ ] Process the response
 - [ ] Testing
