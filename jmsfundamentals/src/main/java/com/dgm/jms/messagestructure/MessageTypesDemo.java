@@ -1,5 +1,6 @@
 package com.dgm.jms.messagestructure;
 
+import com.dgm.jms.model.Patient;
 import org.apache.activemq.artemis.jms.client.ActiveMQConnectionFactory;
 
 import javax.jms.*;
@@ -35,6 +36,13 @@ public class MessageTypesDemo {
             mapMessage.setBoolean("isCreditAvailable", true);
             producer.send(queue, mapMessage);
 
+            ObjectMessage objectMessage = jmsContext.createObjectMessage();
+            Patient patient = new Patient();
+            patient.setId(1);
+            patient.setName("Danilo");
+            objectMessage.setObject(patient);
+            producer.send(queue, objectMessage);
+
 //            Message messageReceived = jmsContext.createConsumer(queue).receive(500);
 //            System.out.println(messageReceived);
 
@@ -46,8 +54,13 @@ public class MessageTypesDemo {
 //            System.out.println(messageReceived.readBoolean());
 //            System.out.println(messageReceived.readFloat());
 
-            MapMessage messageReceived = (MapMessage) jmsContext.createConsumer(queue).receive();
-            System.out.printf("isCreditAvailable: %b\n", messageReceived.getBoolean("isCreditAvailable"));
+//            MapMessage messageReceived = (MapMessage) jmsContext.createConsumer(queue).receive();
+//            System.out.printf("isCreditAvailable: %b\n", messageReceived.getBoolean("isCreditAvailable"));
+
+            ObjectMessage messageReceived = (ObjectMessage) jmsContext.createConsumer(queue).receive();
+            Patient patientReceived = (Patient) messageReceived.getObject();
+            System.out.println(patientReceived.getId());
+            System.out.println(patientReceived.getName());
         }
     }
 }

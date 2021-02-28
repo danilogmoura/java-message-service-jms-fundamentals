@@ -4,9 +4,6 @@
 
 Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 
-- Start: 2021-02-26
-- Finish: In progress
-
 #### Course content
 
 ##### Section 1: Start Here
@@ -60,7 +57,7 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] Add custom message properties
 - [x] Message Types
 - [x] Message types in action
-- [ ] Create Object Message
+- [x] Create Object Message
 - [ ] JMS 2.x makes it simple
 - [ ] Quiz 3: Anatomy of a JMS Message
 
