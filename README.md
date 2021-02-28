@@ -59,13 +59,13 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] Message types in action
 - [x] Create Object Message
 - [x] JMS 2.x makes it simple
-- [ ] Quiz 3: Anatomy of a JMS Message
+- [x] Quiz 3: Anatomy of a JMS Message
 
 ##### Section 6: P2P Messaging
 
-- [ ] When to use Point to Point
-- [ ] Usecase
-- [ ] Create the project
+- [x] When to use Point to Point
+- [x] Usecase
+- [x] Create the project
 - [ ] Create the model class
 - [ ] Create the clinical app and send a message
 - [ ] Asynchronous Processing
