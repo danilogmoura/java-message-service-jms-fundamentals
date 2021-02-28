@@ -56,7 +56,7 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] Use MessageId and CorrelationId Headers
 - [x] Set message expiry
 - [x] Access Expired Message
-- [ ] Delay the message delivery
+- [x] Delay the message delivery
 - [ ] Add custom message properties
 - [ ] Message Types
 - [ ] Message types in action
