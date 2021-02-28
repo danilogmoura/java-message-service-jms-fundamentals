@@ -13,16 +13,18 @@ public class EligibilityCheckerApp {
 
     public static void main(String[] args) throws NamingException {
 
-
         final InitialContext initialContext = new InitialContext();
         final Queue requestQueue = (Queue) initialContext.lookup("queue/requestQueue");
 
         try (final ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory();
-             final JMSContext context = connectionFactory.createContext()) {
+             final JMSContext jmsContext = connectionFactory.createContext()) {
 
-            final JMSConsumer consumer = context.createConsumer(requestQueue);
+            final JMSConsumer consumer = jmsContext.createConsumer(requestQueue);
             consumer.setMessageListener(new EligibilityCheckListener());
-        }
 
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

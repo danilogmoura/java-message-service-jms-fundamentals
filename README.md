@@ -72,7 +72,7 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] Receive Patient Data
 - [x] Check Eligibility and Send Reply
 - [x] Process the response
-- [ ] Testing
+- [x] Testing
 - [ ] Load Balancing in action
 - [ ] Quiz 4: P2P Messaging
 - [ ] Assignment 1: Messaging in Action

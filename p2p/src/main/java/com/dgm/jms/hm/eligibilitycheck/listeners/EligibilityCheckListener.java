@@ -11,15 +11,15 @@ public class EligibilityCheckListener implements MessageListener {
 
     @Override
     public void onMessage(Message message) {
-        ObjectMessage objectMessage = (ObjectMessage) message;
+        final ObjectMessage objectMessage = (ObjectMessage) message;
 
         try (final ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory();
              final JMSContext jmsContext = connectionFactory.createContext()) {
 
-            final Patient patient = (Patient) objectMessage.getObject();
-
             final InitialContext initialContext = new InitialContext();
             final Queue replyQueue = (Queue) initialContext.lookup("queue/replyQueue");
+
+            final Patient patient = (Patient) objectMessage.getObject();
 
             final MapMessage mapMessage = jmsContext.createMapMessage();
             mapMessage.setBoolean("eligible", false);
@@ -28,6 +28,8 @@ public class EligibilityCheckListener implements MessageListener {
             System.out.printf("Insurance Provider: %s\n", insuranceProvider);
 
             if (insuranceProvider.equals("Blue Cross Blue Shield") || insuranceProvider.equals("United Health")) {
+                System.out.printf("Patients Copay is: $%.2f, Amount to be payed: $%.2f\n", patient.getCopay(), patient.getAmountToBePayed());
+
                 if (patient.getCopay() < 40 && patient.getAmountToBePayed() < 1000) {
                     mapMessage.setBoolean("eligible", true);
                 }
@@ -35,10 +37,7 @@ public class EligibilityCheckListener implements MessageListener {
 
             final JMSProducer producer = jmsContext.createProducer();
             producer.send(replyQueue, mapMessage);
-
-        } catch (JMSException e) {
-            e.printStackTrace();
-        } catch (NamingException e) {
+        } catch (JMSException | NamingException e) {
             e.printStackTrace();
         }
     }
