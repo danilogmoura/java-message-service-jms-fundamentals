@@ -71,7 +71,7 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] Asynchronous Processing
 - [x] Receive Patient Data
 - [x] Check Eligibility and Send Reply
-- [ ] Process the response
+- [x] Process the response
 - [ ] Testing
 - [ ] Load Balancing in action
 - [ ] Quiz 4: P2P Messaging

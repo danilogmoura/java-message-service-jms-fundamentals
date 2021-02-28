@@ -19,7 +19,7 @@ public class EligibilityCheckListener implements MessageListener {
             final Patient patient = (Patient) objectMessage.getObject();
 
             final InitialContext initialContext = new InitialContext();
-            final Queue queueReplay = (Queue) initialContext.lookup("queue/queueReplay");
+            final Queue replyQueue = (Queue) initialContext.lookup("queue/replyQueue");
 
             final MapMessage mapMessage = jmsContext.createMapMessage();
             mapMessage.setBoolean("eligible", false);
@@ -34,13 +34,12 @@ public class EligibilityCheckListener implements MessageListener {
             }
 
             final JMSProducer producer = jmsContext.createProducer();
-            producer.send(queueReplay, mapMessage);
+            producer.send(replyQueue, mapMessage);
 
         } catch (JMSException e) {
             e.printStackTrace();
         } catch (NamingException e) {
             e.printStackTrace();
         }
-
     }
 }
