@@ -57,7 +57,7 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] Set message expiry
 - [x] Access Expired Message
 - [x] Delay the message delivery
-- [ ] Add custom message properties
+- [x] Add custom message properties
 - [ ] Message Types
 - [ ] Message types in action
 - [ ] Create Object Message
