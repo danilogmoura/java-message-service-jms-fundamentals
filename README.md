@@ -73,7 +73,7 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] Check Eligibility and Send Reply
 - [x] Process the response
 - [x] Testing
-- [ ] Load Balancing in action
+- [x] Load Balancing in action
 - [ ] Quiz 4: P2P Messaging
 - [ ] Assignment 1: Messaging in Action
 

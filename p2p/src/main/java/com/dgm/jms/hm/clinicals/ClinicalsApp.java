@@ -29,12 +29,15 @@ public class ClinicalsApp {
             objectMessage.setObject(patient);
 
             final JMSProducer producer = jmsContext.createProducer();
-            producer.send(requestQueue, objectMessage);
 
-            final JMSConsumer consumer = jmsContext.createConsumer(replyQueue);
-            final MapMessage messageReceive = (MapMessage) consumer.receive(30000);
+            for (int i = 0; i < 10; i++) {
+                producer.send(requestQueue, objectMessage);
+            }
 
-            System.out.printf("Patient eligibility is: %b", messageReceive.getBoolean("eligible"));
+//            final JMSConsumer consumer = jmsContext.createConsumer(replyQueue);
+//            final MapMessage messageReceive = (MapMessage) consumer.receive(30000);
+
+//            System.out.printf("Patient eligibility is: %b", messageReceive.getBoolean("eligible"));
         } catch (JMSException e) {
             e.printStackTrace();
         }
