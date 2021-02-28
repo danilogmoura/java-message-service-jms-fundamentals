@@ -66,8 +66,8 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] When to use Point to Point
 - [x] Usecase
 - [x] Create the project
-- [ ] Create the model class
-- [ ] Create the clinical app and send a message
+- [x] Create the model class
+- [x] Create the clinical app and send a message
 - [ ] Asynchronous Processing
 - [ ] Receive Patient Data
 - [ ] Check Eligibility and Send Reply
