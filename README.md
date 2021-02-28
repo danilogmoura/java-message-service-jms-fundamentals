@@ -79,9 +79,9 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 
 ##### Section 7: Pub- Sub Messaging
 
-- [ ] When to use pub-sub
-- [ ] Usecase
-- [ ] Create the project
+- [x] When to use pub-sub
+- [x] Usecase
+- [x] Create the project
 - [ ] Create the EventPublisher
 - [ ] Create the Subscribers
 - [ ] Pub Sub in action
