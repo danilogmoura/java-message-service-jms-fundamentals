@@ -11,12 +11,13 @@ public class RequestReplyDemo {
 
         InitialContext initialContext = new InitialContext();
         Queue requestQueue = (Queue) initialContext.lookup("queue/requestQueue");
-        Queue replayQueue = (Queue) initialContext.lookup("queue/replyQueue");
+//        Queue replayQueue = (Queue) initialContext.lookup("queue/replyQueue");
 
         try (ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory();
              JMSContext jmsContext = connectionFactory.createContext()) {
 
             JMSProducer producer = jmsContext.createProducer();
+            TemporaryQueue replayQueue = jmsContext.createTemporaryQueue();
             TextMessage textMessage = jmsContext.createTextMessage("Arise Awake and stop not till the goal is reached.");
             textMessage.setJMSReplyTo(replayQueue);
             producer.send(requestQueue, textMessage);
