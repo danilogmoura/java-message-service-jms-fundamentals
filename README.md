@@ -49,7 +49,7 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 
 - [x] Introduction
 - [x] Prioritize Messages
-- [ ] Default Priority
+- [x] Default Priority
 - [ ] Request Reply Messaging
 - [ ] Use replyTo JMS Header
 - [ ] When to use replyTo header?
