@@ -4,6 +4,8 @@ import org.apache.activemq.artemis.jms.client.ActiveMQConnectionFactory;
 
 import javax.jms.*;
 import javax.naming.InitialContext;
+import java.util.HashMap;
+import java.util.Map;
 
 public class RequestReplyDemo {
 
@@ -21,16 +23,26 @@ public class RequestReplyDemo {
             TextMessage textMessage = jmsContext.createTextMessage("Arise Awake and stop not till the goal is reached.");
             textMessage.setJMSReplyTo(replayQueue);
             producer.send(requestQueue, textMessage);
+            System.out.println(textMessage.getJMSMessageID());
+
+            Map<String, TextMessage> requestMessage = new HashMap<>();
+            requestMessage.put(textMessage.getJMSMessageID(), textMessage);
 
             JMSConsumer consumer = jmsContext.createConsumer(requestQueue);
             TextMessage messageReceived = (TextMessage) consumer.receive();
             System.out.println(messageReceived.getText());
+            System.out.println();
 
             JMSProducer replayProducer = jmsContext.createProducer();
-            replayProducer.send(messageReceived.getJMSReplyTo(), "You are awesome!!!");
+            TextMessage replayMessage = jmsContext.createTextMessage("You are awesome!!!");
+            replayMessage.setJMSCorrelationID(messageReceived.getJMSMessageID());
+            replayProducer.send(messageReceived.getJMSReplyTo(), replayMessage);
 
             JMSConsumer replayConsumer = jmsContext.createConsumer(replayQueue);
-            System.out.println(replayConsumer.receiveBody(String.class));
+            TextMessage replayReceived = (TextMessage) replayConsumer.receive();
+            System.out.println(replayReceived.getJMSCorrelationID());
+            System.out.println(replayReceived.getText());
+            System.out.println(requestMessage.get(replayReceived.getJMSCorrelationID()).getText());
         }
     }
 }
