@@ -43,12 +43,12 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] Use QueueBrowser
 - [x] JMS 2.X
 - [x] JMS 2.0 is Cool
-- [ ] Quiz 2: Messaging in Action
+- [x] Quiz 2: Messaging in Action
 
 ##### Section 5: Anatomy of a JMS Message
 
-- [ ] Introduction
-- [ ] Prioritize Messages
+- [x] Introduction
+- [x] Prioritize Messages
 - [ ] Default Priority
 - [ ] Request Reply Messaging
 - [ ] Use replyTo JMS Header
