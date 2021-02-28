@@ -14,7 +14,6 @@ public class MessageDelayDemo {
 
         InitialContext initialContext = new InitialContext();
         Queue queue = (Queue) initialContext.lookup("queue/myQueue");
-        Queue expiryQueue = (Queue) initialContext.lookup("queue/expiryQueue");
 
         try (ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory();
              JMSContext jmsContext = connectionFactory.createContext()) {

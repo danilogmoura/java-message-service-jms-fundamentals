@@ -12,8 +12,7 @@ public class RequestReplyDemo {
     public static void main(String[] args) throws Exception {
 
         InitialContext initialContext = new InitialContext();
-        Queue requestQueue = (Queue) initialContext.lookup("queue/requestQueue");
-//        Queue replayQueue = (Queue) initialContext.lookup("queue/replyQueue");
+        Queue queue = (Queue) initialContext.lookup("queue/requestQueue");
 
         try (ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory();
              JMSContext jmsContext = connectionFactory.createContext()) {
@@ -22,13 +21,13 @@ public class RequestReplyDemo {
             TemporaryQueue replayQueue = jmsContext.createTemporaryQueue();
             TextMessage textMessage = jmsContext.createTextMessage("Arise Awake and stop not till the goal is reached.");
             textMessage.setJMSReplyTo(replayQueue);
-            producer.send(requestQueue, textMessage);
+            producer.send(queue, textMessage);
             System.out.println(textMessage.getJMSMessageID());
 
             Map<String, TextMessage> requestMessage = new HashMap<>();
             requestMessage.put(textMessage.getJMSMessageID(), textMessage);
 
-            JMSConsumer consumer = jmsContext.createConsumer(requestQueue);
+            JMSConsumer consumer = jmsContext.createConsumer(queue);
             TextMessage messageReceived = (TextMessage) consumer.receive();
             System.out.println(messageReceived.getText());
             System.out.println();

@@ -58,8 +58,8 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] Access Expired Message
 - [x] Delay the message delivery
 - [x] Add custom message properties
-- [ ] Message Types
-- [ ] Message types in action
+- [x] Message Types
+- [x] Message types in action
 - [ ] Create Object Message
 - [ ] JMS 2.x makes it simple
 - [ ] Quiz 3: Anatomy of a JMS Message

@@ -11,17 +11,16 @@ public class MessagePropertiesDemo {
 
         InitialContext initialContext = new InitialContext();
         Queue queue = (Queue) initialContext.lookup("queue/myQueue");
-        Queue expiryQueue = (Queue) initialContext.lookup("queue/expiryQueue");
 
         try (ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory();
              JMSContext jmsContext = connectionFactory.createContext()) {
 
             JMSProducer producer = jmsContext.createProducer();
             producer.setDeliveryDelay(300);
-            TextMessage message = jmsContext.createTextMessage("Arise Awake and stop not till the goal is reached");
-            message.setBooleanProperty("loggedIn", true);
-            message.setStringProperty("userToken", "abc123");
-            producer.send(queue, message);
+            TextMessage textMessage = jmsContext.createTextMessage("Arise Awake and stop not till the goal is reached");
+            textMessage.setBooleanProperty("loggedIn", true);
+            textMessage.setStringProperty("userToken", "abc123");
+            producer.send(queue, textMessage);
 
             Message messageReceived = jmsContext.createConsumer(queue).receive(500);
             System.out.println(messageReceived);
