@@ -54,7 +54,7 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] Use replyTo JMS Header
 - [x] When to use replyTo header?
 - [x] Use MessageId and CorrelationId Headers
-- [ ] Set message expiry
+- [x] Set message expiry
 - [ ] Access Expired Message
 - [ ] Delay the message delivery
 - [ ] Add custom message properties
