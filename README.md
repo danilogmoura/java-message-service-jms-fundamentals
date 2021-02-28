@@ -74,8 +74,8 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] Process the response
 - [x] Testing
 - [x] Load Balancing in action
-- [ ] Quiz 4: P2P Messaging
-- [ ] Assignment 1: Messaging in Action
+- [x] Quiz 4: P2P Messaging
+- [x] Assignment 1: Messaging in Action
 
 ##### Section 7: Pub- Sub Messaging
 
