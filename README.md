@@ -58,7 +58,7 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] Message Types
 - [x] Message types in action
 - [x] Create Object Message
-- [ ] JMS 2.x makes it simple
+- [x] JMS 2.x makes it simple
 - [ ] Quiz 3: Anatomy of a JMS Message
 
 ##### Section 6: P2P Messaging

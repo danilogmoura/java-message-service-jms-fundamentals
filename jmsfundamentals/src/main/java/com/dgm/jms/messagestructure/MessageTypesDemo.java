@@ -38,10 +38,11 @@ public class MessageTypesDemo {
 
             ObjectMessage objectMessage = jmsContext.createObjectMessage();
             Patient patient = new Patient();
-            patient.setId(1);
+            patient.setId(123);
             patient.setName("Danilo");
             objectMessage.setObject(patient);
-            producer.send(queue, objectMessage);
+//            producer.send(queue, objectMessage);
+            producer.send(queue, patient);
 
 //            Message messageReceived = jmsContext.createConsumer(queue).receive(500);
 //            System.out.println(messageReceived);
@@ -57,8 +58,10 @@ public class MessageTypesDemo {
 //            MapMessage messageReceived = (MapMessage) jmsContext.createConsumer(queue).receive();
 //            System.out.printf("isCreditAvailable: %b\n", messageReceived.getBoolean("isCreditAvailable"));
 
-            ObjectMessage messageReceived = (ObjectMessage) jmsContext.createConsumer(queue).receive();
-            Patient patientReceived = (Patient) messageReceived.getObject();
+//            ObjectMessage messageReceived = (ObjectMessage) jmsContext.createConsumer(queue).receive();
+//            Patient patientReceived = (Patient) messageReceived.getObject();
+
+            Patient patientReceived = jmsContext.createConsumer(queue).receiveBody(Patient.class);
             System.out.println(patientReceived.getId());
             System.out.println(patientReceived.getName());
         }
