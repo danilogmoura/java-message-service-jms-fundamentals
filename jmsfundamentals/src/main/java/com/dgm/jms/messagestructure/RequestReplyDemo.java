@@ -2,10 +2,7 @@ package com.dgm.jms.messagestructure;
 
 import org.apache.activemq.artemis.jms.client.ActiveMQConnectionFactory;
 
-import javax.jms.JMSConsumer;
-import javax.jms.JMSContext;
-import javax.jms.JMSProducer;
-import javax.jms.Queue;
+import javax.jms.*;
 import javax.naming.InitialContext;
 
 public class RequestReplyDemo {
@@ -20,14 +17,16 @@ public class RequestReplyDemo {
              JMSContext jmsContext = connectionFactory.createContext()) {
 
             JMSProducer producer = jmsContext.createProducer();
-            producer.send(requestQueue, "Arise Awake and stop not till the goal is reached.");
+            TextMessage textMessage = jmsContext.createTextMessage("Arise Awake and stop not till the goal is reached.");
+            textMessage.setJMSReplyTo(replayQueue);
+            producer.send(requestQueue, textMessage);
 
             JMSConsumer consumer = jmsContext.createConsumer(requestQueue);
-            String messageReceived = consumer.receiveBody(String.class);
-            System.out.println(messageReceived);
+            TextMessage messageReceived = (TextMessage) consumer.receive();
+            System.out.println(messageReceived.getText());
 
             JMSProducer replayProducer = jmsContext.createProducer();
-            replayProducer.send(replayQueue, "You are awesome!!!");
+            replayProducer.send(messageReceived.getJMSReplyTo(), "You are awesome!!!");
 
             JMSConsumer replayConsumer = jmsContext.createConsumer(replayQueue);
             System.out.println(replayConsumer.receiveBody(String.class));
