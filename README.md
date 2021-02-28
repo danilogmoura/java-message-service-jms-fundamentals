@@ -50,7 +50,7 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] Introduction
 - [x] Prioritize Messages
 - [x] Default Priority
-- [ ] Request Reply Messaging
+- [x] Request Reply Messaging
 - [ ] Use replyTo JMS Header
 - [ ] When to use replyTo header?
 - [ ] Use MessageId and CorrelationId Headers
