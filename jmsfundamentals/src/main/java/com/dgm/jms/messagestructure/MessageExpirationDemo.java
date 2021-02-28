@@ -14,6 +14,7 @@ public class MessageExpirationDemo {
 
         InitialContext initialContext = new InitialContext();
         Queue queue = (Queue) initialContext.lookup("queue/myQueue");
+        Queue expiryQueue = (Queue) initialContext.lookup("queue/expiryQueue");
 
         try (ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory();
              JMSContext jmsContext = connectionFactory.createContext()) {
@@ -26,6 +27,9 @@ public class MessageExpirationDemo {
 
             Message messageReceived = jmsContext.createConsumer(queue).receive(500);
             System.out.println(messageReceived);
+
+            System.out.println("\nExpiry Queue");
+            System.out.println(jmsContext.createConsumer(expiryQueue).receiveBody(String.class));
         }
     }
 }

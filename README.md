@@ -55,7 +55,7 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] When to use replyTo header?
 - [x] Use MessageId and CorrelationId Headers
 - [x] Set message expiry
-- [ ] Access Expired Message
+- [x] Access Expired Message
 - [ ] Delay the message delivery
 - [ ] Add custom message properties
 - [ ] Message Types
