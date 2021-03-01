@@ -93,8 +93,8 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 
 ##### Section 8: Filter the messages
 
-- [ ] Introduction
-- [ ] Create the project and model
+- [x] Introduction
+- [x] Create the project and model
 - [ ] Create the Claim Producer and Consumer
 - [ ] Fliters in action
 - [ ] Use other operators
