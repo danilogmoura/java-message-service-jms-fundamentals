@@ -128,7 +128,7 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] Send a group of messages
 - [x] Create a listener
 - [x] Consume and validate the message
-- [ ] Test
+- [x] Test
 
 ##### Section 12: Java EE and Message Driven Beans
 
