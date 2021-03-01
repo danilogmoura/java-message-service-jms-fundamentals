@@ -37,12 +37,11 @@ public class ClaimManagement {
 //            String messageSelector = "doctorName LIKE 'J%n'";
 //            String messageSelector = "doctorName LIKE 'Joh_'";
 //            String messageSelector = "doctorType IN ('neuro','gyna')";
-            String messageSelector = "doctorType IN ('neuro','psych')";
+            String messageSelector = "doctorType IN ('neuro','psych') OR JMSPriority BETWEEN 3 AND 6";
 
             final JMSConsumer consumer = jmsContext.createConsumer(queue, messageSelector);
             final Claim receiveBody = consumer.receiveBody(Claim.class);
             System.out.println(receiveBody);
-
         }
     }
 }

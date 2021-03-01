@@ -97,8 +97,8 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] Create the project and model
 - [x] Create the Claim Producer and Consumer
 - [x] Fliters in action
-- [ ] Use other operators
-- [ ] Filter by header
+- [x] Use other operators
+- [x] Filter by header
 - [ ] Quiz 6: Filters
 - [ ] Assignment 3: Filters
 
