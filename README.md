@@ -106,8 +106,8 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 
 - [x] Introduction
 - [x] Create the project
-- [ ] Use AUTO_ACKNOWLEDGE
-- [ ] DUPS_OK_ACKNOWLEDGE AND CLIENT_ACKNOWLEDGE
+- [x] Use AUTO_ACKNOWLEDGE
+- [x] DUPS_OK_ACKNOWLEDGE AND CLIENT_ACKNOWLEDGE
 - [ ] Use CLIENT_ACKNOWLEDGE and DUPS_OK_ACKNOWLEDGE
 - [ ] JMS Transactions
 - [ ] JMS Transactions in action
