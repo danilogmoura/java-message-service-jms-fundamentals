@@ -124,8 +124,8 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 
 ##### Section 11: Message Grouping
 
-- [ ] Introduction
-- [ ] Send a group of messages
+- [x] Introduction
+- [x] Send a group of messages
 - [ ] Create a listener
 - [ ] Consume and validate the message
 - [ ] Test
