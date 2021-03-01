@@ -95,7 +95,7 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 
 - [x] Introduction
 - [x] Create the project and model
-- [ ] Create the Claim Producer and Consumer
+- [x] Create the Claim Producer and Consumer
 - [ ] Fliters in action
 - [ ] Use other operators
 - [ ] Filter by header
