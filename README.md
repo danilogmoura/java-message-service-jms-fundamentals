@@ -108,8 +108,8 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] Create the project
 - [x] Use AUTO_ACKNOWLEDGE
 - [x] DUPS_OK_ACKNOWLEDGE AND CLIENT_ACKNOWLEDGE
-- [ ] Use CLIENT_ACKNOWLEDGE and DUPS_OK_ACKNOWLEDGE
-- [ ] JMS Transactions
+- [x] Use CLIENT_ACKNOWLEDGE and DUPS_OK_ACKNOWLEDGE
+- [x] JMS Transactions
 - [ ] JMS Transactions in action
 - [ ] Transactions on the consumer side
 - [ ] Quiz 7: Guaranteed Messaging
