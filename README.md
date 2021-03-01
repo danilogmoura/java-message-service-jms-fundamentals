@@ -137,8 +137,8 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] Install JBoss WidFly Server
 - [x] Create the queue
 - [x] Create the Maven Project
-- [ ] Create a producer
-- [ ] Create the Servlet
+- [x] Create a producer
+- [x] Create the Servlet
 - [ ] Create the MDB
 - [ ] Configure MDB
 - [ ] Update the project and pom.xml
