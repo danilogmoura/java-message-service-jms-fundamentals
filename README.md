@@ -112,8 +112,8 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] JMS Transactions
 - [x] JMS Transactions in action
 - [x] Transactions on the consumer side
-- [ ] Quiz 7: Guaranteed Messaging
-- [ ] Assignment 4: Guaranteed Messaging
+- [x] Quiz 7: Guaranteed Messaging
+- [x] Assignment 4: Guaranteed Messaging
 
 ##### Section 10: Security
 
