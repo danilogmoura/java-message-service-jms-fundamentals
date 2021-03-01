@@ -99,8 +99,8 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] Fliters in action
 - [x] Use other operators
 - [x] Filter by header
-- [ ] Quiz 6: Filters
-- [ ] Assignment 3: Filters
+- [x] Quiz 6: Filters
+- [x] Assignment 3: Filters
 
 ##### Section 9: Guaranteed Messaging
 
