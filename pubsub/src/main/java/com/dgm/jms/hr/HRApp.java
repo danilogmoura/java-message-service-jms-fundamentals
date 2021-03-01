@@ -29,7 +29,9 @@ public class HRApp {
             );
 
             final ObjectMessage objectMessage = jmsContext.createObjectMessage(employee);
-            jmsContext.createProducer().send(topic, objectMessage);
+            for (int i = 0; i < 10; i++) {
+                jmsContext.createProducer().send(topic, objectMessage);
+            }
 
             System.out.println("Message Sent");
         }
