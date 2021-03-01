@@ -16,7 +16,9 @@ public class MessageProducer {
         final Queue requestQueue = (Queue) initialContext.lookup("queue/requestQueue");
 
         try (final ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory();
-             final JMSContext jmsContext = connectionFactory.createContext(JMSContext.AUTO_ACKNOWLEDGE)) {
+//             final JMSContext jmsContext = connectionFactory.createContext(JMSContext.AUTO_ACKNOWLEDGE)
+             final JMSContext jmsContext = connectionFactory.createContext(JMSContext.DUPS_OK_ACKNOWLEDGE)
+        ) {
 
             final JMSProducer producer = jmsContext.createProducer();
             producer.send(requestQueue, "Message 1");
