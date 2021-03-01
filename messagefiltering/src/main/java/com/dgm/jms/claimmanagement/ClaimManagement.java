@@ -9,7 +9,7 @@ import javax.naming.NamingException;
 
 public class ClaimManagement {
 
-    public static void main(String[] args) throws NamingException {
+    public static void main(String[] args) throws NamingException, JMSException {
 
         final InitialContext initialContext = new InitialContext();
         final Queue queue = (Queue) initialContext.lookup("queue/claimQueue");
@@ -20,14 +20,28 @@ public class ClaimManagement {
             Claim claim = new Claim(
                     1,
                     "John",
-                    "dyna",
+                    "gyna",
                     "blue cross",
                     1000);
 
             ObjectMessage objectMessage = jmsContext.createObjectMessage(claim);
+//            objectMessage.setIntProperty("hospitalId", claim.getHospitalId());
+//            objectMessage.setDoubleProperty("claimAmount", claim.getClaimAmount());
+//            objectMessage.setStringProperty("doctorName", claim.getDoctorName());
+            objectMessage.setStringProperty("doctorType", claim.getDoctorType());
 
-            final JMSProducer producer = jmsContext.createProducer();
-            final JMSConsumer consumer = jmsContext.createConsumer(queue, "");
+            jmsContext.createProducer().send(queue, objectMessage);
+
+//            String messageSelector = "claimAmount BETWEEN 1001 AND 5000";
+//            String messageSelector = "doctorName='John'";
+//            String messageSelector = "doctorName LIKE 'J%n'";
+//            String messageSelector = "doctorName LIKE 'Joh_'";
+//            String messageSelector = "doctorType IN ('neuro','gyna')";
+            String messageSelector = "doctorType IN ('neuro','psych')";
+
+            final JMSConsumer consumer = jmsContext.createConsumer(queue, messageSelector);
+            final Claim receiveBody = consumer.receiveBody(Claim.class);
+            System.out.println(receiveBody);
 
         }
     }
