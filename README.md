@@ -139,10 +139,10 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] Create the Maven Project
 - [x] Create a producer
 - [x] Create the Servlet
-- [ ] Create the MDB
-- [ ] Configure MDB
-- [ ] Update the project and pom.xml
-- [ ] Deploy and Run
+- [x] Create the MDB
+- [x] Configure MDB
+- [x] Update the project and pom.xml
+- [x] Deploy and Run
 
 ##### Section 13: Spring JMS Overview
 
@@ -153,7 +153,3 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [ ] Test
 - [ ] Few more Spring JMS things
 - [ ] Quiz 8: Spring JMS
-
-##### Section 14: Wrap Up
-
-- [ ] Quiz 9: Final Quiz
