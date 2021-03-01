@@ -82,8 +82,8 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] When to use pub-sub
 - [x] Usecase
 - [x] Create the project
-- [ ] Create the EventPublisher
-- [ ] Create the Subscribers
+- [x] Create the EventPublisher
+- [x] Create the Subscribers
 - [ ] Pub Sub in action
 - [ ] Durable Subscriptions
 - [ ] Durable Subscriptions in action
