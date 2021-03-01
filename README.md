@@ -117,10 +117,10 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 
 ##### Section 10: Security
 
-- [ ] Introduction
-- [ ] Create Users and Roles
-- [ ] Configure Security
-- [ ] Security in action
+- [x] Introduction
+- [x] Create Users and Roles
+- [x] Configure Security
+- [x] Security in action
 
 ##### Section 11: Message Grouping
 
