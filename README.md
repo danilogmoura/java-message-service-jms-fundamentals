@@ -88,8 +88,8 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] Durable Subscriptions
 - [x] Durable Subscriptions in action
 - [x] Shared Subscriptions in action
-- [ ] Quiz 5: Pub Sub messaging
-- [ ] Assignment 2: Pub Sub in action
+- [x] Quiz 5: Pub Sub messaging
+- [x] Assignment 2: Pub Sub in action
 
 ##### Section 8: Filter the messages
 
