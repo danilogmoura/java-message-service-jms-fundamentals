@@ -146,10 +146,10 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 
 ##### Section 13: Spring JMS Overview
 
-- [ ] Introduction
-- [ ] Create the Project
-- [ ] Send a message
-- [ ] Receive the message
-- [ ] Test
-- [ ] Few more Spring JMS things
-- [ ] Quiz 8: Spring JMS
+- [x] Introduction
+- [x] Create the Project
+- [x] Send a message
+- [x] Receive the message
+- [x] Test
+- [x] Few more Spring JMS things
+- [x] Quiz 8: Spring JMS
