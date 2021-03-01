@@ -132,9 +132,9 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 
 ##### Section 12: Java EE and Message Driven Beans
 
-- [ ] Introduction
-- [ ] Injecting Resources
-- [ ] Install JBoss WidFly Server
+- [x] Introduction
+- [x] Injecting Resources
+- [x] Install JBoss WidFly Server
 - [ ] Create the queue
 - [ ] Create the Maven Project
 - [ ] Create a producer
