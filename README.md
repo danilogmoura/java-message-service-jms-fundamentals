@@ -126,7 +126,7 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 
 - [x] Introduction
 - [x] Send a group of messages
-- [ ] Create a listener
+- [x] Create a listener
 - [ ] Consume and validate the message
 - [ ] Test
 
