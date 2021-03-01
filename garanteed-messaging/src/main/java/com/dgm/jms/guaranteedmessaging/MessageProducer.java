@@ -17,11 +17,14 @@ public class MessageProducer {
 
         try (final ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory();
 //             final JMSContext jmsContext = connectionFactory.createContext(JMSContext.AUTO_ACKNOWLEDGE)
-             final JMSContext jmsContext = connectionFactory.createContext(JMSContext.DUPS_OK_ACKNOWLEDGE)
+//             final JMSContext jmsContext = connectionFactory.createContext(JMSContext.DUPS_OK_ACKNOWLEDGE)
+             final JMSContext jmsContext = connectionFactory.createContext(JMSContext.SESSION_TRANSACTED)
         ) {
-
             final JMSProducer producer = jmsContext.createProducer();
             producer.send(requestQueue, "Message 1");
+
+            producer.send(requestQueue, "Message 2");
+            jmsContext.commit();
         }
     }
 }

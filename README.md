@@ -110,8 +110,8 @@ Course offered by [Bharath Thippireddy](http://www.bharaththippireddy.com/).
 - [x] DUPS_OK_ACKNOWLEDGE AND CLIENT_ACKNOWLEDGE
 - [x] Use CLIENT_ACKNOWLEDGE and DUPS_OK_ACKNOWLEDGE
 - [x] JMS Transactions
-- [ ] JMS Transactions in action
-- [ ] Transactions on the consumer side
+- [x] JMS Transactions in action
+- [x] Transactions on the consumer side
 - [ ] Quiz 7: Guaranteed Messaging
 - [ ] Assignment 4: Guaranteed Messaging
 
