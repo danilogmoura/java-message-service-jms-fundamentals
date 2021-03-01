@@ -22,7 +22,7 @@ public class PayrollApp {
             final JMSConsumer consumer = jmsContext.createConsumer(topic);
             final Employee employee = consumer.receiveBody(Employee.class);
 
-            System.out.println(employee.getFirstName());
+            System.out.println(employee);
         }
     }
 }
